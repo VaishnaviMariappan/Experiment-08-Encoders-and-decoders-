@@ -5,9 +5,9 @@ To implement 8 to 3 Encoder and  3to8 Decoder using verilog and validate its out
 PC, Cyclone II , USB flasher
 ### SOFTWARE REQUIRED: 
 Quartus prime
-### THEORY 
+### THEORY :
 
-## Encoders
+### Encoders
 Binary code of N digits can be used to store 2N distinct elements of coded information. This is what encoders and decoders are used for. Encoders convert 2N lines of input into a code of N bits and Decoders decode the N bits into 2N lines.
 
 1. Encoders –
@@ -63,16 +63,15 @@ D7 = X Y Z
 3. Declare the the variables for input and output.
 4. Use assign to define the functionality of logic circuits for decoder.
 5. And end the module
-
-## Step 6:
-Run the program and choose RTL viewer to get RTL realization.
-### PROGRAM 
+6. Run the program and view the RTL Logic.
+7. In the waveform give random values and get the timing diagrams.
+### PROGRAM:
 ```
 Program for Endocers and Decoders  and verify its truth table in quartus using Verilog programming.
 Developed by: Vaishnavi M
 RegisterNumber:  212221240058
 
-ENCODER : 
+ENCODER: 
 
 module encoder(a,b,c,d0,d1,d2,d3,d4,d5,d6,d7);
 input d0,d1,d2,d3,d4,d5,d6,d7;
@@ -82,7 +81,7 @@ or(b,d2,d3,d6,d7);
 or(c,d1,d3,d5,d7);
 endmodule
 
-DECODER :
+DECODER:
 
 module decoder(d0,d1,d2,d3,d4,d5,d6,d7,a,b,c);
 input a,b,c;
@@ -97,7 +96,7 @@ assign d6=(a&b&~c);
 assign d7=(a&b&c);
 endmodule
 ```
-## ENCODER :
+## ENCODER:
 ### RTL LOGIC  
 ![rtl](./encoderd0.png)
 ### TIMING DIGRAMS  
